@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Web Factory - Gerador de Sites</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <div class="logo">IA</div>
+            <div class="logo-text">Web Factory</div>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="nav-link active" data-tab="home">Início</a>
+            <a href="#" class="nav-link" data-tab="projects">Meus Projetos</a>
+            <a href="#" class="nav-link" data-tab="templates">Templates</a>
+        </div>
+        <div class="right-actions">
+            <div class="user-avatar">
+                <img src="https://ui-avatars.com/api/?name=Vitor&background=5865F2&color=fff" alt="Vitor">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Tab -->
+    <div id="home-tab" class="tab-content active">
+        <section class="hero">
+            <h1>Bem-vindo, Vitor! 👋</h1>
+            <p>Pronto para criar mais um projeto incrível? Escolha o tipo de site e personalize cada detalhe.</p>
+        </section>
+
+        <!-- Site Type Selection -->
+        <section class="section">
+            <h2>🎯 Selecione o Tipo de Site</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-type="restaurante">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Restaurante</h3>
+                    <p>Cardápio online, reservas, galeria</p>
+                </div>
+                <div class="category-card" data-type="loja-roupas">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>Loja de Roupas</h3>
+                    <p>E-commerce, catálogo, carrinho</p>
+                </div>
+                <div class="category-card" data-type="portfolio">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Portfólio</h3>
+                    <p>Pessoal, projetos, habilidades</p>
+                </div>
+                <div class="category-card" data-type="consultorio">
+                    <i class="fas fa-stethoscope"></i>
+                    <h3>Consultório</h3>
+                    <p>Médico, agenda, especialidades</p>
+                </div>
+                <div class="category-card" data-type="academia">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Academia</h3>
+                    <p>Modalidades, planos, horários</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customization Panel -->
+        <section id="customization-panel" class="section" style="display: none;">
+            <h2>🎨 Personalize seu Site</h2>
+            <div class="customization-container">
+                <div class="preview-section">
+                    <div class="preview-placeholder">
+                        <i class="fas fa-desktop"></i>
+                        <p>Preview do site aparecerá aqui</p>
+                    </div>
+                </div>
+                
+                <div class="controls-section">
+                    <div class="control-group">
+                        <h4>🎨 Cores do Site</h4>
+                        <div class="color-pickers">
+                            <div class="color-picker">
+                                <label>Cor Principal</label>
+                                <input type="color" id="primary-color" value="#5865F2">
+                            </div>
+                            <div class="color-picker">
+                                <label>Cor Secundária</label>
+                                <input type="color" id="secondary-color" value="#7c3aed">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <h4>📝 Tipografia</h4>
+                        <select id="font-select">
+                            <option value="Poppins">Poppins (Moderno)</option>
+                            <option value="Arial">Arial (Clássico)</option>
+                            <option value="Georgia">Georgia (Elegante)</option>
+                            <option value="Montserrat">Montserrat (Minimalista)</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <h4>⚙️ Funcionalidades</h4>
+                        <div class="checkboxes">
+                            <label class="checkbox">
+                                <input type="checkbox" id="navbar-check" checked>
+                                <span class="checkmark"></span>
+                                Navbar Fixa
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" id="whatsapp-check" checked>
+                                <span class="checkmark"></span>
+                                Botão WhatsApp
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" id="cart-check">
+                                <span class="checkmark"></span>
+                                Carrinho de Compras
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" id="gallery-check" checked>
+                                <span class="checkmark"></span>
+                                Galeria de Imagens
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <h4>📱 Layout</h4>
+                        <div class="layout-options">
+                            <label class="radio">
+                                <input type="radio" name="layout" value="modern" checked>
+                                <span class="radiomark"></span>
+                                Moderno
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="layout" value="minimal">
+                                <span class="radiomark"></span>
+                                Minimalista
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="layout" value="corporate">
+                                <span class="radiomark"></span>
+                                Corporativo
+                            </label>
+                        </div>
+                    </div>
+
+                    <button id="generate-btn" class="generate-button">
+                        <i class="fas fa-magic"></i>
+                        Gerar Site com IA
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results-section" class="section" style="display: none;">
+            <h2>✨ Seu Site Está Pronto!</h2>
+            <div class="results-container">
+                <div class="code-preview">
+                    <div class="code-header">
+                        <h4>📄 Código do Site</h4>
+                        <button id="copy-code" class="copy-button">
+                            <i class="fas fa-copy"></i> Copiar
+                        </button>
+                    </div>
+                    <textarea id="code-output" readonly placeholder="Seu código aparecerá aqui..."></textarea>
+                </div>
+                
+                <div class="actions-panel">
+                    <h4>🚀 Ações Rápidas</h4>
+                    <button id="download-code" class="action-btn">
+                        <i class="fas fa-download"></i> Baixar Código
+                    </button>
+                    <button id="new-project" class="action-btn secondary">
+                        <i class="fas fa-plus"></i> Novo Projeto
+                    </button>
+                    <button id="preview-site" class="action-btn">
+                        <i class="fas fa-eye"></i> Preview
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Projects Tab -->
+    <div id="projects-tab" class="tab-content">
+        <section class="section">
+            <h2>📂 Meus Projetos</h2>
+            <div id="projects-list" class="projects-grid">
+                <!-- Projetos carregados via JS -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Templates Tab -->
+    <div id="templates-tab" class="tab-content">
+        <section class="section">
+            <h2>🎨 Templates Prontos</h2>
+            <div class="templates-grid">
+                <div class="template-card">
+                    <div class="template-preview" style="background: linear-gradient(135deg, #667eea, #764ba2);"></div>
+                    <h3>Restaurante Premium</h3>
+                    <p>Template completo para restaurantes</p>
+                    <button class="use-template" data-type="restaurante">Usar Template</button>
+                </div>
+                <div class="template-card">
+                    <div class="template-preview" style="background: linear-gradient(135deg, #f093fb, #f5576c);"></div>
+                    <h3>Loja Fashion</h3>
+                    <p>E-commerce moderno para moda</p>
+                    <button class="use-template" data-type="loja-roupas">Usar Template</button>
+                </div>
+                <div class="template-card">
+                    <div class="template-preview" style="background: linear-gradient(135deg, #4facfe, #00f2fe);"></div>
+                    <h3>Portfólio Criativo</h3>
+                    <p>Showcase profissional</p>
+                    <button class="use-template" data-type="portfolio">Usar Template</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
