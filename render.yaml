@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: site-generator-ai
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: GEMINI_API_KEY
+        value: AIzaSyBag3Nu1Hhqm69ZgNgCwWNFKjmw6EBGXvQ
