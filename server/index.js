@@ -58,7 +58,7 @@ app.get('/api/projects', async (req, res) => {
 
 // Servir frontend
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
+  res.sendFile(path.join(__dirname, '../docs/index.html'));
 });
 
 // Health check
