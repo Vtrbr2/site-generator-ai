@@ -13,7 +13,7 @@ const app = express();
 // Middlewares
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static('docs'));
 
 // Inicializar banco
 initDatabase();
